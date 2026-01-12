@@ -63,7 +63,7 @@ export default function CheatingDetector() {
     if (score >= 70) return '💔 Major Red Flags... Trust Your Gut';
     if (score >= 50) return '😭 Suspicious Activity Detected';
     if (score >= 30) return '😔 Some Concerns... Watch Closely';
-    return '💚 Probably Okay... (For Now)';
+    return '💚 You're FINE, he is busy!';
   };
 
   const getResultEmoji = (score: number): string => {
