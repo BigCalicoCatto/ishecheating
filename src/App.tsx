@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 interface Question {
   id: number;
@@ -191,7 +191,6 @@ export default function CheatingDetector() {
                   padding: '16px 20px',
                   fontSize: '16px',
                   fontWeight: 'bold',
-                  border: 'none',
                   borderRadius: '10px',
                   backgroundColor: 'rgba(255, 107, 157, 0.2)',
                   color: '#ff6b9d',
@@ -217,7 +216,6 @@ export default function CheatingDetector() {
                   padding: '16px 20px',
                   fontSize: '16px',
                   fontWeight: 'bold',
-                  border: 'none',
                   borderRadius: '10px',
                   backgroundColor: 'rgba(100, 200, 150, 0.2)',
                   color: '#64c896',
