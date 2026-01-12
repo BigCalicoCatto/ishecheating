@@ -63,7 +63,7 @@ export default function CheatingDetector() {
     if (score >= 70) return '💔 Major Red Flags... Trust Your Gut';
     if (score >= 50) return '😭 Suspicious Activity Detected';
     if (score >= 30) return '😔 Some Concerns... Watch Closely';
-    return '💚 You're FINE, he is busy!';
+    return '💜 He\'s Probably Just Busy';
   };
 
   const getResultEmoji = (score: number): string => {
@@ -222,23 +222,23 @@ export default function CheatingDetector() {
                   fontSize: '16px',
                   fontWeight: 'bold',
                   borderRadius: '10px',
-                  backgroundColor: 'rgba(100, 200, 150, 0.2)',
-                  color: '#64c896',
+                  backgroundColor: 'rgba(150, 150, 200, 0.2)',
+                  color: '#9696c8',
                   cursor: 'pointer',
                   transition: 'all 0.3s ease',
                   backdropFilter: 'blur(5px)',
-                  border: '2px solid rgba(100, 200, 150, 0.4)',
+                  border: '2px solid rgba(150, 150, 200, 0.4)',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(100, 200, 150, 0.4)';
+                  e.currentTarget.style.backgroundColor = 'rgba(150, 150, 200, 0.4)';
                   e.currentTarget.style.transform = 'scale(1.05)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(100, 200, 150, 0.2)';
+                  e.currentTarget.style.backgroundColor = 'rgba(150, 150, 200, 0.2)';
                   e.currentTarget.style.transform = 'scale(1)';
                 }}
               >
-                💚 No
+                🤷 No
               </button>
             </div>
           </>
@@ -258,7 +258,7 @@ export default function CheatingDetector() {
                 style={{
                   fontSize: '28px',
                   marginBottom: '8px',
-                  color: score >= 50 ? '#ff6b9d' : '#64c896',
+                  color: score >= 50 ? '#ff6b9d' : '#9696c8',
                   fontWeight: 'bold',
                 }}
               >
@@ -290,7 +290,7 @@ export default function CheatingDetector() {
                         ? 'linear-gradient(135deg, #ff6b9d 0%, #c44569 100%)'
                         : score >= 30
                           ? 'linear-gradient(135deg, #ffaa00 0%, #ff7700 100%)'
-                          : 'linear-gradient(135deg, #00dd88 0%, #00aa44 100%)',
+                          : 'linear-gradient(135deg, #9696c8 0%, #6b68b0 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
@@ -301,39 +301,39 @@ export default function CheatingDetector() {
               </p>
             </div>
 
-            <div
-              style={{
-                backgroundColor: 'rgba(60, 30, 60, 0.6)',
-                borderRadius: '12px',
-                padding: '16px',
-                marginBottom: '24px',
-                fontSize: '14px',
-                lineHeight: '1.6',
-                color: '#d0d0d0',
-                border: '1px solid rgba(200, 50, 150, 0.2)',
-              }}
-            >
-              {score >= 70 && (
-                <p style={{ margin: '0' }}>
-                  🚨 Multiple concerning signs detected. Trust your intuition and consider having an honest conversation. You deserve clarity.
-                </p>
-              )}
-              {score >= 50 && score < 70 && (
-                <p style={{ margin: '0' }}>
-                  ⚠️ Several flags raised. Keep your eyes open and don't ignore your gut feeling. Pay attention to his behavior.
-                </p>
-              )}
-              {score >= 30 && score < 50 && (
-                <p style={{ margin: '0' }}>
-                  🤔 Some signs to be cautious about. It might be worth a conversation to clear things up and ease your mind.
-                </p>
-              )}
-              {score < 30 && (
-                <p style={{ margin: '0' }}>
-                  💚 Good news! Limited red flags detected. He's probably not cheating... but trust your instincts above all else.
-                </p>
-              )}
-            </div>
+              <div
+                style={{
+                  backgroundColor: 'rgba(60, 30, 60, 0.6)',
+                  borderRadius: '12px',
+                  padding: '16px',
+                  marginBottom: '24px',
+                  fontSize: '14px',
+                  lineHeight: '1.6',
+                  color: '#d0d0d0',
+                  border: '1px solid rgba(200, 50, 150, 0.2)',
+                }}
+              >
+                {score >= 70 && (
+                  <p style={{ margin: '0' }}>
+                    🚨 Multiple concerning signs detected. Trust your intuition and consider having an honest conversation. You deserve clarity.
+                  </p>
+                )}
+                {score >= 50 && score < 70 && (
+                  <p style={{ margin: '0' }}>
+                    ⚠️ Several flags raised. Keep your eyes open and don't ignore your gut feeling. Pay attention to his behavior.
+                  </p>
+                )}
+                {score >= 30 && score < 50 && (
+                  <p style={{ margin: '0' }}>
+                    🤔 Some signs to be cautious about. It might be worth a conversation to clear things up and ease your mind.
+                  </p>
+                )}
+                {score < 30 && (
+                  <p style={{ margin: '0' }}>
+                    💜 Great news! The signs suggest he's just busy with his own stuff. Relationships have their natural rhythms—sometimes he's focused on work, friends, or personal goals. That doesn't mean he doesn't care about you. Keep communicating and you two will be just fine.
+                  </p>
+                )}
+              </div>
 
             <button
               onClick={resetQuiz}
